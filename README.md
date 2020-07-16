@@ -24,7 +24,8 @@
     {
         "email": "ex@gmail.com", "reference": "Q89D", 
         "public_key": "FLWPUBK-xxxxx", 
-        "amount": "3000", allow_redirect: "yes" 
+        "amount": "3000", "allow_redirect": "yes",
+        "redirect_url": "https://example-main-server.com/callback" 
     }
 
   - Response: The response is a payment link which you can call on iframe pop or just redirect by setting 
