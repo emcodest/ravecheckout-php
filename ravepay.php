@@ -2,7 +2,7 @@
 /** 
  *  Craft a post request to this endpoint file
  * @var endpoint: https://ur-domain.com/ravepay.php
- * @var request: {email, reference, public_key, amount }
+ * @var request: {email, reference, public_key, amount, allow_redirect: 'no' }
  * @var response: a payment link you can load on an iframe popup or you redirect
  * */
 $POST = file_get_contents("php://input");
@@ -68,6 +68,12 @@ if (isset($req["reference"])) {
 
     // redirect to page so User can pay
     // uncomment this line to allow the user redirect to the payment page
-    //header('Location: ' . $transaction->data->link);
+    if(isset($allow_redirect)){
+        if($allow_redirect != "no"){
+            header('Location: ' . $transaction->data->link);
+            exit;
+        }
+    }
+    
     echo $transaction->data->link;
 }
