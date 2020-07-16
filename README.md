@@ -21,6 +21,7 @@
   - E.g  https://ur-domain.com/ravecheckout-php/ravepay.php
         
   - Request Object: 
+  ```json
         { 
             "email": "ex@gmail.com", 
             "reference": "Q89D", 
@@ -32,6 +33,7 @@
             "product_description": "nice one",
             "custom_logo": "https://cdn.pixabay.com/photo/2016/09/14/20/50/teeth-1670434_960_720.png"
          }
+    ```
 
   - Response: The response is a payment link which you can call on iframe pop or just redirect by setting 
     allow_redirect: 'yes'  in the request object
