@@ -1,2 +1,6 @@
 # ravecheckout-php
-Integrate Flutterwave in your PHP app
+Integrate Flutterwave Payment in your PHP app as plugin
+@Author: Emcode
+
+# SETUP GUIDE
+
