@@ -1,5 +1,5 @@
 <?php
-/** 
+/**
  *  Craft a post request to this endpoint file
  * @var endpoint: https://ur-domain.com/ravepay.php
  * @var request: {email, reference, public_key, amount, allow_redirect: 'no' }
@@ -14,19 +14,18 @@ if ($req == "") {
     $req = $_POST;
 }
 
-
 if (isset($req["reference"])) {
-  
+
     extract($req);
 
     $curl = curl_init();
 
     $customer_email = $email;
-    
+
     $currency = "NGN";
     $txref = $reference; // ensure you generate unique references per transaction.
     $PBFPubKey = "$public_key"; // get your public key from the dashboard.
-    
+
     $payment_plan = ""; // this is only required for recurring payments.
 
     curl_setopt_array($curl, array(
@@ -68,12 +67,12 @@ if (isset($req["reference"])) {
 
     // redirect to page so User can pay
     // uncomment this line to allow the user redirect to the payment page
-    if(isset($allow_redirect)){
-        if($allow_redirect != "no"){
+    if (isset($allow_redirect)) {
+        if ($allow_redirect != "no") {
             header('Location: ' . $transaction->data->link);
             exit;
         }
     }
-    
+
     echo $transaction->data->link;
 }
