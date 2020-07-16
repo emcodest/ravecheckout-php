@@ -1,6 +1,6 @@
 # ravecheckout-php
 - Simple REST API to Integrate flutterwave payment
-@Author: Emcode
+    @Author: Emcode
 
 # SETUP GUIDE
 
