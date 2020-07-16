@@ -20,7 +20,7 @@
 - Make a post request using any language or REST CLIENT to the file ravepay.php. 
   - E.g  https://ur-domain.com/ravecheckout-php/ravepay.php
         
-    Request Object: 
+         Request Object: 
   ```json
         { 
             "email": "ex@gmail.com", 
