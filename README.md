@@ -42,7 +42,7 @@
             {
                details of the transaction
             }
-    ## You can setup a cronjob to call the 
+## You can setup a cronjob to call the 
 
 # SUPPORT IS AVAILABLE
    - If you need quick help in setting up very secure flutterwave payment on your CPANEL account.
