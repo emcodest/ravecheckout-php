@@ -6,8 +6,7 @@
  * @var response: a payment link you can load on an iframe popup or you redirect
  * */
 $POST = file_get_contents("php://input");
-echo '<pre>'.print_r($_POST, true).'</pre>';
-echo '<pre>'.print_r($POST, true).'</pre>';
+
 $req = json_decode($POST, true);
 
 if ($req == "") {
