@@ -36,8 +36,18 @@
       Just email me: eeema9@gmail.com
 
 # SUPPORT FEE IS JUST N15,000
+   - Pay To: 
+   Name: Emanovwe Emmanuel Junior 
+
+   BANK: GTB 
+
+   Account No: 0033033067
+
+   ** Just email me a proof of payment. Then you have my support to help you personally.
 
 # EMAIL CONTACT: eeema9@gmail.com
+
+# 
 
 
 
