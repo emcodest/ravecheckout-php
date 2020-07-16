@@ -43,11 +43,11 @@
    - E.g  https://ur-domain.com/ravecheckout-php/verify.php
         
           Request Object: 
-            ```json
+        ```json
             {
                  "reference": "Q89D"
             }
-            ```
+        ```
         - RESPONSE Object: 
             {
                details of the transaction
