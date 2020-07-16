@@ -31,7 +31,7 @@
     allow_redirect: 'yes'  in the request object
 
 # SUPPORT IS AVAILABLE
-   - If you need help in setting up on your CPANEL account.
+   - If you need quick help in setting up very secure flutterwave payment on your CPANEL account.
 
       Just email me: eeema9@gmail.com
 
