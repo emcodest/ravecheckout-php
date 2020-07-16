@@ -20,7 +20,7 @@
 - Make a post request using any language or REST CLIENT to the file ravepay.php. 
   - E.g  https://ur-domain.com/ravecheckout-php/ravepay.php
         
-         Request Object: 
+  Request Object: 
   ```json
         { 
             "email": "ex@gmail.com", 
@@ -61,13 +61,13 @@
 
 # SUPPORT FEE IS JUST N15,000
    - Pay To: 
-   Name: Emanovwe Emmanuel Junior 
+        Name: Emanovwe Emmanuel Junior 
 
-   BANK: GTB 
+        BANK: GTB 
 
-   Account No: 0033033067
+        Account No: 0033033067
 
-   ** Just email me a proof of payment. Then you have my support to help you personally.
+    - Just email me a proof of payment. Then you have my support to help you personally.
 
 # EMAIL CONTACT: eeema9@gmail.com
 
