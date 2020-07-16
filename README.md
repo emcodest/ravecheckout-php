@@ -18,7 +18,7 @@
         1   23      Q89D      3000   ex@gmail.com   unpaid
 
 - Make a post request using any language or REST CLIENT to the file ravepay.php. 
-  - E.g  https://ur-domain.com/ravecheckout-php/ravepay.php
+  - E.g  https://digimart.pro/ravecheckout-php/ravepay.php
         
   Request Object: 
   ```json
@@ -40,7 +40,7 @@
 # PAYMENT VERIFICATION
    - Make a post request using any language or REST CLIENT to the file verify.php. 
    
-   - E.g  https://ur-domain.com/ravecheckout-php/verify.php
+   - E.g  https://digimart.pro/ravecheckout-php/verify.php
         
           Request Object: 
         ```json
