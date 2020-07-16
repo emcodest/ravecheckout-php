@@ -18,7 +18,7 @@
         1   23      Q89D      3000   ex@gmail.com   unpaid
 
 - Make a post request using any language or REST CLIENT to the file ravepay.php. 
-  - E.g  https://ur-domain.com/ravepay.php
+  - E.g  https://ur-domain.com/ravecheckout-php/ravepay.php
         
   - Request Object: 
     {
@@ -29,6 +29,20 @@
 
   - Response: The response is a payment link which you can call on iframe pop or just redirect by setting 
     allow_redirect: 'yes'  in the request object
+# PAYMENT VERIFICATION
+   - Make a post request using any language or REST CLIENT to the file verify.php. 
+   
+   - E.g  https://ur-domain.com/ravecheckout-php/verify.php
+        
+        - Request Object: 
+            {
+                 "reference": "Q89D"
+            }
+        - RESPONSE Object: 
+            {
+               details of the transaction
+            }
+    ## You can setup a cronjob to call the 
 
 # SUPPORT IS AVAILABLE
    - If you need quick help in setting up very secure flutterwave payment on your CPANEL account.
