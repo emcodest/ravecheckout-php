@@ -39,6 +39,9 @@ if (isset($req["reference"])) {
             'txref' => $txref,
             'PBFPubKey' => $PBFPubKey,
             'redirect_url' => $redirect_url,
+            "custom_title" =>  isset($product_name) ?  $product_name: "",
+            "custom_desc" =>  isset($product_description) ?  $product_description: "",
+            "custom_logo" =>  isset($custom_logo) ?  $custom_logo: ""
             //'payment_plan'=>$payment_plan
         ]),
         CURLOPT_HTTPHEADER => [
@@ -60,10 +63,15 @@ if (isset($req["reference"])) {
     if (!$transaction->data && !$transaction->data->link) {
         // there was an error from the API
         print_r('API returned error: ' . $transaction->message);
+        exit;
     }
 
     // uncomment out this line if you want to redirect the user to the payment page
     //print_r($transaction->data->message);
+    if(! isset($transaction->data->link)){
+        print_r($transaction->data->message);
+        exit;
+    }
 
     // redirect to page so User can pay
     // uncomment this line to allow the user redirect to the payment page
