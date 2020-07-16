@@ -1,0 +1,84 @@
+
+
+################################ NODE JS
+
+var request = require("request");
+
+var options = { method: 'POST',
+  url: 'https://example.com/ravecheckout-php/verify.php',
+  headers: 
+   { 'Postman-Token': '666f6925-419c-43f9-9296-fc421596b159',
+     'Cache-Control': 'no-cache',
+     'Content-Type': 'application/json' },
+  body: { reference: 'Q89D478' },
+  json: true };
+
+request(options, function (error, response, body) {
+  if (error) throw new Error(error);
+
+  console.log(body);
+});
+
+################################# PHP
+<?php
+
+$curl = curl_init();
+
+curl_setopt_array($curl, array(
+  CURLOPT_URL => "https://example.com/ravecheckout-php/verify.php",
+  CURLOPT_RETURNTRANSFER => true,
+  CURLOPT_ENCODING => "",
+  CURLOPT_MAXREDIRS => 10,
+  CURLOPT_TIMEOUT => 30,
+  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+  CURLOPT_CUSTOMREQUEST => "POST",
+  CURLOPT_POSTFIELDS => "{\n\t\"reference\" : \"Q89D478\"\n}",
+  CURLOPT_HTTPHEADER => array(
+    "Cache-Control: no-cache",
+    "Content-Type: application/json",
+    "Postman-Token: 61304766-fd41-43c2-9d6a-dfed3bf288ad"
+  ),
+));
+
+$response = curl_exec($curl);
+$err = curl_error($curl);
+
+curl_close($curl);
+
+if ($err) {
+  echo "cURL Error #:" . $err;
+} else {
+  echo $response;
+}
+
+#########################################  GO LANG
+package main
+
+import (
+	"fmt"
+	"strings"
+	"net/http"
+	"io/ioutil"
+)
+
+func main() {
+
+	url := "https://example.com/ravecheckout-php/verify.php"
+
+	payload := strings.NewReader("{\n\t\"reference\" : \"Q89D478\"\n}")
+
+	req, _ := http.NewRequest("POST", url, payload)
+
+	req.Header.Add("Content-Type", "application/json")
+	req.Header.Add("Cache-Control", "no-cache")
+	req.Header.Add("Postman-Token", "6cbb84e7-2afe-4e8b-acd8-8406ce2f99af")
+
+	res, _ := http.DefaultClient.Do(req)
+
+	defer res.Body.Close()
+	body, _ := ioutil.ReadAll(res.Body)
+
+	fmt.Println(res)
+	fmt.Println(string(body))
+
+}

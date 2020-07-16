@@ -1,0 +1,59 @@
+####################### NODE JS
+
+var request = require("request");
+
+var options = { method: 'POST',
+  url: 'https://digimart.pro/ravecheckout-php/ravepay.php',
+  headers: 
+   { 'Postman-Token': '9aa92b62-b2f9-4f99-9fe1-cd9645424311',
+     'Cache-Control': 'no-cache',
+     'Content-Type': 'application/json' },
+  body: 
+   { email: 'ex@gmail.com',
+     reference: 'Q89D478',
+     public_key: 'FLWPUBK-71543e3a8648e7f1cb51f3bc9522170c-X',
+     amount: '4000',
+     allow_redirect: 'no',
+     redirect_url: 'https://digimart.pro',
+     product_name: 'Wallet fund or buy shoe',
+     product_description: 'nice one',
+     custom_logo: 'https://cdn.pixabay.com/photo/2016/09/14/20/50/teeth-1670434_960_720.png' },
+  json: true };
+
+request(options, function (error, response, body) {
+  if (error) throw new Error(error);
+
+  console.log(body);
+});
+
+##################################### PHP
+<?php
+
+$curl = curl_init();
+
+curl_setopt_array($curl, array(
+  CURLOPT_URL => "https://digimart.pro/ravecheckout-php/ravepay.php",
+  CURLOPT_RETURNTRANSFER => true,
+  CURLOPT_ENCODING => "",
+  CURLOPT_MAXREDIRS => 10,
+  CURLOPT_TIMEOUT => 30,
+  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+  CURLOPT_CUSTOMREQUEST => "POST",
+  CURLOPT_POSTFIELDS => " { \r\n\t\t  \"email\": \"ex@gmail.com\", \r\n          \"reference\": \"Q89D478\", \r\n          \"public_key\": \"FLWPUBK-71543e3a8648e7f1cb51f3bc9522170c-X\",\r\n          \"amount\": \"4000\", \r\n          \"allow_redirect\": \"no\",\r\n          \"redirect_url\": \"https://digimart.pro\",\r\n          \"product_name\": \"Wallet fund or buy shoe\",\r\n          \"product_description\": \"nice one\",\r\n          \"custom_logo\": \"https://cdn.pixabay.com/photo/2016/09/14/20/50/teeth-1670434_960_720.png\"\r\n \t\r\n }",
+  CURLOPT_HTTPHEADER => array(
+    "Cache-Control: no-cache",
+    "Content-Type: application/json",
+    "Postman-Token: 5dbf4043-4fe1-43ae-99a5-d73d71029252"
+  ),
+));
+
+$response = curl_exec($curl);
+$err = curl_error($curl);
+
+curl_close($curl);
+
+if ($err) {
+  echo "cURL Error #:" . $err;
+} else {
+  echo $response;
+}
