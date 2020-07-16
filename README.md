@@ -18,17 +18,17 @@
         1   23      Q89D      3000   ex@gmail.com   unpaid
 
 - Make a post request using any language or REST CLIENT to the file ravepay.php. 
-  - E.g  https://digimart.pro/ravecheckout-php/ravepay.php
+  - E.g  https://example.com/ravecheckout-php/ravepay.php
         
   Request Object: 
   ```json
         { 
             "email": "ex@gmail.com", 
             "reference": "Q89D", 
-            "public_key": "FLWPUBK-71543e3a8648e7f1cb51f3bc9522170c-X",
+            "public_key": "FLWPUBK-xxxxxxx-X",
             "amount": "3000", 
             "allow_redirect": "no",
-            "redirect_url": "https://digimart.pro",
+            "redirect_url": "https://example.pro",
             "product_name": "Wallet fund or buy shoe",
             "product_description": "nice one",
             "custom_logo": "https://cdn.pixabay.com/photo/2016/09/14/20/50/teeth-1670434_960_720.png"
@@ -40,7 +40,7 @@
 # PAYMENT VERIFICATION
    - Make a post request using any language or REST CLIENT to the file verify.php. 
    
-   - E.g  https://digimart.pro/ravecheckout-php/verify.php
+   - E.g  https://example.com/ravecheckout-php/verify.php
         
           Request Object: 
         ```json
