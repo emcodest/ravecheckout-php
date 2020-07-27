@@ -21,7 +21,7 @@ if (isset($req["reference"])) {
     $curl = curl_init();
 
     $customer_email = $email;
-
+    if(! isset($currency))
     $currency = "NGN";
     $txref = $reference; // ensure you generate unique references per transaction.
     $PBFPubKey = "$public_key"; // get your public key from the dashboard.
@@ -38,7 +38,7 @@ if (isset($req["reference"])) {
             'currency' => $currency,
             'txref' => $txref,
             'PBFPubKey' => $PBFPubKey,
-            'meta' => isset($meta) ?  json_decode($meta) : "",    
+            'meta' => isset($meta) ?  $meta : "",    
             "payment_options" =>  isset($payment_options) ? $payment_options : "",       
             'redirect_url' => $redirect_url,
             "custom_title" =>  isset($product_name) ?  $product_name: "",
