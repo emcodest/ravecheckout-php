@@ -38,6 +38,8 @@ if (isset($req["reference"])) {
             'currency' => $currency,
             'txref' => $txref,
             'PBFPubKey' => $PBFPubKey,
+            'meta' => isset($meta) ?  json_decode($meta) : "",    
+            "payment_options" =>  isset($payment_options) ? $payment_options : "",       
             'redirect_url' => $redirect_url,
             "custom_title" =>  isset($product_name) ?  $product_name: "",
             "custom_desc" =>  isset($product_description) ?  $product_description: "",
